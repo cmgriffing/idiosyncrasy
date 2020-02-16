@@ -1,0 +1,74 @@
+{
+  "name": "idiosyncrasy",
+  "private": true,
+  "description": "A fanfic marketing site inspired by Quirk.",
+  "version": "0.1.0",
+  "author": "twitch chat",
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.21.1",
+    "node": ">= 10.15.0"
+  },
+  "dependencies": {
+    "gatsby": "^2.19.7",
+    "gatsby-background-image": "0.9.13",
+    "gatsby-image": "^2.2.39",
+    "gatsby-plugin-manifest": "^2.2.39",
+    "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-sharp": "^2.4.3",
+    "gatsby-plugin-styled-components": "^3.1.18",
+    "gatsby-remark-images": "^3.1.31",
+    "gatsby-remark-relative-images": "^0.2.3",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-remark": "^2.6.49",
+    "gatsby-transformer-sharp": "^2.3.13",
+    "gatsby-transformer-sqip": "^2.1.63",
+    "intersection-observer": "^0.7.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "^5.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^8.3.4",
+    "babel-plugin-styled-components": "^1.10.7",
+    "commitizen": "^4.0.3",
+    "cross-env": "^7.0.0",
+    "cz-conventional-changelog": "3.0.2",
+    "husky": "^3.1.0",
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "cross-env ENVIRONMENT=prod NODE_ENV=prod GATSBY_ACTIVE_ENV=prod gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "yarn build && git subtree push --prefix public origin gh-pages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && yarn git-cz --hook || true"
+    }
+  }
+}
