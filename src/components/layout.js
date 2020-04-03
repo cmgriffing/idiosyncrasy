@@ -9,10 +9,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import styled from "styled-components"
+
+import breakpoints from "../common/breakpoints"
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const _Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,24 +32,39 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          minHeight: "500px",
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
+      <Footer siteTitle={data.site.siteMetadata.title} />
     </>
   )
 }
 
-Layout.propTypes = {
+_Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export const Layout = _Layout
+
+export const InnerWrapper = styled.div`
+  margin: 0 auto;
+  max-width: ${breakpoints.mobile}px;
+
+  @media (min-width: ${breakpoints.mobile}px) {
+    max-width: ${breakpoints.tablet}px;
+  }
+  @media (min-width: ${breakpoints.tablet}px) {
+    max-width: ${breakpoints.medium}px;
+  }
+  @media (min-width: ${breakpoints.medium}px) {
+    max-width: ${breakpoints.large}px;
+  }
+  @media (min-width: ${breakpoints.large}px) {
+    max-width: ${breakpoints.xl}px;
+  }
+  @media (min-width: ${breakpoints.xl}px) {
+    max-width: ${breakpoints.xxl}px;
+  }
+`
