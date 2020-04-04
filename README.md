@@ -53,7 +53,7 @@ Great! You're already halfway there!
 
 Just to note, to access your WSL Ubuntu folders from Windows File Manager, they will be under this directory in your LocalAppData
 
-`%LOCALAPPDATA%\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs`
+`%LOCALAPPDATA%\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs` 
 
 ### Installing the Tools for WSL
 #### GIT
