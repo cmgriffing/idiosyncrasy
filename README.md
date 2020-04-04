@@ -37,6 +37,77 @@ Your PR will be declined if it does not match the commit formatting provided.
 
 ![](./readme-assets/commitizen.png)
 
+---
+## Windows Dev - Setup Guide (WSL)
+Currently, Gatsby recommends using windows-build-tools with NPM from Visual Studio, however an alternative less pain-staking way would be to use Windows Subsystem for Linux (WSL).
+
+If you wish to not use WSL, please read => [Gatsby on Windows](https://www.gatsbyjs.org/docs/gatsby-on-windows/) for more info.
+
+To Begin, you need to toggle WSL from Powershell (Must be running as admin) which can be found here => [How to turn on and install WSL on Windows](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+
+Next, you will need to grab a flavour of WSL you may like, we recommend Ubuntu for stability => [Get Ubuntu WSL](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab)
+
+Once this is installed, type in your search bar for ubuntu and load up the Ubuntu WSL CLI
+
+Great! You're already halfway there! 
+
+Just to note, to access your WSL Ubuntu folders from Windows File Manager, they will be under this directory in your LocalAppData
+
+**%LOCALAPPDATA%\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs**
+
+### Installing the Tools for WSL
+#### GIT
+Git will already be pre-installed with WSL however, it will need updating to the latest version of git which can be done 
+
+**sudo add-apt-repository ppa:git-core/ppa -y**
+**sudo apt-get update**
+**sudo apt-get install git -y**
+**git --version**
+
+if your system doesn't have add-adp-repository, you can install it using
+sudo apt-get install python-software-properties software-properties-common
+
+#### NODE
+
+As with every linux package manager, run the update and upgrade commands so we don't end up with dependancy issues. (Note, Node is needed before Yarn is installed).
+
+**sudo apt update**
+**sudo apt -y upgrade**
+
+Next, add the NODE APT repository to your repository list (Note, this is for LTS version 12.x)
+
+**sudo apt update**
+**sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates**
+**curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -**
+
+Finally, install Nodejs
+
+**sudo apt -y install nodejs**
+
+run node **--version** to see if it installed correctly
+
+#### YARN
+
+First add Yarn to your repository list
+
+**curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -**
+**echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list**
+
+Then Simply run
+
+**sudo apt update && sudo apt install yarn**
+
+now run
+
+**yarn -v**
+
+your version should be **1.22.0**
+
+## You're ready to go!
+Simply clone your git repo, cd into in and run Yarn to install any missing dependancies from node!
+
+---
+
 # The MIT License (MIT)
 
 Copyright © 2020 Idiosyncrasy
