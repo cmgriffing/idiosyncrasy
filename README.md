@@ -53,16 +53,16 @@ Great! You're already halfway there!
 
 Just to note, to access your WSL Ubuntu folders from Windows File Manager, they will be under this directory in your LocalAppData
 
-**%LOCALAPPDATA%\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs**
+`%LOCALAPPDATA%\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs`
 
 ### Installing the Tools for WSL
 #### GIT
 Git will already be pre-installed with WSL however, it will need updating to the latest version of git which can be done 
 
-**sudo add-apt-repository ppa:git-core/ppa -y**
-**sudo apt-get update**
-**sudo apt-get install git -y**
-**git --version**
+`sudo add-apt-repository ppa:git-core/ppa -y`
+`sudo apt-get update`
+`sudo apt-get install git -y`
+`git --version`
 
 if your system doesn't have add-adp-repository, you can install it using
 sudo apt-get install python-software-properties software-properties-common
@@ -71,14 +71,14 @@ sudo apt-get install python-software-properties software-properties-common
 
 Instructions can be found here: [Node LTS v12.x Install](https://computingforgeeks.com/how-to-install-nodejs-on-ubuntu-debian-linux-mint/)
 
-run node **--version** to see if it installed correctly
+run node `--version` to see if it installed correctly
 
 #### YARN
 
 Instructions can be found here: [Yarn Ubuntu Debian Install](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
 
 ## You're ready to go!
-Simply clone your git repo, cd into in and run Yarn to install any missing dependancies from node!
+Simply clone your git repo, cd into in and run `Yarn` to install any missing dependancies from node!
 
 ---
 
