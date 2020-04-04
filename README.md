@@ -33,6 +33,14 @@ We use [Commitizen](http://commitizen.github.io/cz-cli/) to format commit messag
 
 _Make sure you `yarn` to install the dependencies before commiting._
 
+**WARNING: Windows Devs**
+
+Currently, we have found a problem with husky commitizen and git commit conflicting on WSL, to solve this, please use:
+
+`yarn git-cz` 
+
+to create your formatted commit message.
+
 Your PR will be declined if it does not match the commit formatting provided.
 
 ![](./readme-assets/commitizen.png)
