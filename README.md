@@ -79,7 +79,7 @@ Instructions can be found here: [Yarn Ubuntu Debian Install](https://classic.yar
 
 ## You're ready to go!
 Simply clone your git repo, cd into in and run `Yarn` to install any missing dependancies from node!
-
+ 
 ---
 
 # The MIT License (MIT)
