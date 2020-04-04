@@ -1,11 +1,18 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
 
 import { InnerWrapper } from "./layout"
+import { SlantedBorderElement } from "../common/slanted-borders-helpers"
+import colors from "../common/colors"
+
+const FooterElement = styled(SlantedBorderElement)`
+  background: ${colors.backgrounds.footer};
+`
 
 const Footer = ({ siteTitle }) => (
-  <footer>
+  <FooterElement as="footer">
     <InnerWrapper>
       <div>
         <h4>
@@ -13,7 +20,7 @@ const Footer = ({ siteTitle }) => (
         </h4>
       </div>
     </InnerWrapper>
-  </footer>
+  </FooterElement>
 )
 
 Footer.propTypes = {
