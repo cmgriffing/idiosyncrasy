@@ -33,6 +33,10 @@ We use [Commitizen](http://commitizen.github.io/cz-cli/) to format commit messag
 
 _Make sure you `yarn` to install the dependencies before commiting._
 
+**Warning: Windows Users**
+
+A current found issue on window's is Husky and Git Commit on WSL conflicting resulting in nano blocking husky, to resolve this you must use `yarn git-cz` to create your commit message before pushing.
+
 Your PR will be declined if it does not match the commit formatting provided.
 
 ![](./readme-assets/commitizen.png)
@@ -79,8 +83,6 @@ Instructions can be found here: [Yarn Ubuntu Debian Install](https://classic.yar
 
 ## You're ready to go! (however...)
 Simply clone your git repo, cd into it and run `Yarn` to install any missing dependancies from node!
-
-However, a current found issue on window's is Husky and Git Commit on WSL conflicting resulting in nano blocking husky, to resolve this you must use `yarn git-cz` to create your commit message before pushing.
  
 ---
 
