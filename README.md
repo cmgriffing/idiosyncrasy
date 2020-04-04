@@ -69,39 +69,13 @@ sudo apt-get install python-software-properties software-properties-common
 
 #### NODE
 
-As with every linux package manager, run the update and upgrade commands so we don't end up with dependancy issues. (Note, Node is needed before Yarn is installed).
-
-**sudo apt update**
-**sudo apt -y upgrade**
-
-Next, add the NODE APT repository to your repository list (Note, this is for LTS version 12.x)
-
-**sudo apt update**
-**sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates**
-**curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -**
-
-Finally, install Nodejs
-
-**sudo apt -y install nodejs**
+Instructions can be found here: [Node LTS v12.x Install](https://computingforgeeks.com/how-to-install-nodejs-on-ubuntu-debian-linux-mint/)
 
 run node **--version** to see if it installed correctly
 
 #### YARN
 
-First add Yarn to your repository list
-
-**curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -**
-**echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list**
-
-Then Simply run
-
-**sudo apt update && sudo apt install yarn**
-
-now run
-
-**yarn -v**
-
-your version should be **1.22.0**
+Instructions can be found here: [Yarn Ubuntu Debian Install](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
 
 ## You're ready to go!
 Simply clone your git repo, cd into in and run Yarn to install any missing dependancies from node!
