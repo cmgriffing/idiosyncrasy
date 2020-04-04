@@ -77,8 +77,10 @@ run node `--version` to see if it installed correctly
 
 Instructions can be found here: [Yarn Ubuntu Debian Install](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
 
-## You're ready to go!
-Simply clone your git repo, cd into in and run `Yarn` to install any missing dependancies from node!
+## You're ready to go! (however...)
+Simply clone your git repo, cd into it and run `Yarn` to install any missing dependancies from node!
+
+However, a current found issue on window's is Husky and Git Commit on WSL conflicting resulting in nano blocking husky, to resolve this you must use `yarn git-cz` to create your commit message before pushing.
  
 ---
 
