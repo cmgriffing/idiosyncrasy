@@ -48,8 +48,8 @@ const _Layout = ({ children }) => {
           rel="stylesheet"
         />
       </Helmet>
-      <Header 
-        siteTitle={data.site.siteMetadata.title} 
+      <Header
+        siteTitle={data.site.siteMetadata.title}
         navLinks={data.site.siteMetadata.navLinks}
       />
 
