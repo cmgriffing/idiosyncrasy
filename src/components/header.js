@@ -9,6 +9,33 @@ import { CTAButton } from "../common/buttons"
 
 import colors from "../common/colors"
 
+const navLinks = [
+  {
+    title: "Features",
+    route: "/features",
+  },
+  {
+    title: "Support",
+    route: "/support",
+  },
+  {
+    title: "Pricing",
+    route: "/pricing",
+  },
+  {
+    title: "News",
+    route: "/news",
+  },
+  {
+    title: "Login",
+    cta: true,
+  },
+  {
+    title: "Sign Up",
+    cta: true,
+  },
+]
+
 const StyledHeader = styled.header`
   background: ${colors.backgrounds.header};
   h1 {
@@ -29,7 +56,7 @@ const HeaderLink = styled(Link)`
   margin: 0 50px;
 `
 
-const Header = ({ siteTitle, navLinks }) => (
+const Header = ({ siteTitle }) => (
   <StyledHeader>
     <InnerWrapper>
       <FlexWrapper>
@@ -59,12 +86,10 @@ const Header = ({ siteTitle, navLinks }) => (
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-  navLinks: PropTypes.array,
 }
 
 Header.defaultProps = {
   siteTitle: ``,
-  navLinks: [],
 }
 
 export default Header
