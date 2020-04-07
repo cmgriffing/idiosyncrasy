@@ -61,13 +61,17 @@ const HeaderLink = styled(Link)`
   margin: 0 50px;
 `
 
+const HeaderLogo = styled(HeaderLink)`
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 54px;
+`
+
 const Header = ({ siteTitle }) => (
   <StyledHeader>
     <InnerWrapper>
       <StyledNavContainer>
-        <h1>
-          <HeaderLink to="/">{siteTitle}</HeaderLink>
-        </h1>
+        <HeaderLogo to="/">{siteTitle}</HeaderLogo>
 
         <div>
           {navLinks.map(link => {
