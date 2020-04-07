@@ -68,7 +68,7 @@ const HeaderLink = styled(Link)`
 const HeaderLogo = styled(HeaderLink)`
   font-size: 36px;
   font-weight: 500;
-  line-height: 54px;
+  line-height: 60px;
 `
 
 const Header = ({ siteTitle }) => (
