@@ -24,10 +24,6 @@ const _Layout = ({ children }) => {
       site {
         siteMetadata {
           title
-          navLinks {
-            title
-            cta
-          }
         }
       }
     }
@@ -48,10 +44,7 @@ const _Layout = ({ children }) => {
           rel="stylesheet"
         />
       </Helmet>
-      <Header
-        siteTitle={data.site.siteMetadata.title}
-        navLinks={data.site.siteMetadata.navLinks}
-      />
+      <Header siteTitle={data.site.siteMetadata.title} />
 
       <div
         style={{
