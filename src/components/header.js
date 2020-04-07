@@ -4,7 +4,6 @@ import React from "react"
 import styled from "styled-components"
 
 import { InnerWrapper } from "./layout"
-import { CTAButton } from "../common/buttons"
 
 import colors from "../common/colors"
 
@@ -25,21 +24,19 @@ const navLinks = [
     title: "News",
     route: "/news",
   },
+]
+
+const navButtons = [
   {
     title: "Login",
-    cta: true,
   },
   {
     title: "Sign Up",
-    cta: true,
   },
 ]
 
 const StyledHeader = styled.header`
   background: ${colors.backgrounds.header};
-  h1 {
-    margin: auto 0;
-  }
 `
 
 const StyledNavContainer = styled.div`
@@ -49,16 +46,23 @@ const StyledNavContainer = styled.div`
 `
 
 const NavButtonWrapper = styled.div`
-  & ${CTAButton}:nth-child(2) {
+  & ${NavButton}:nth-child(2) {
     background-color: ${colors.actions.main};
     color: #fff;
   }
 `
 
+const NavButton = styled.a`
+  padding: 25px;
+  color: #000;
+  background-color: transparent;
+  text-decoration: none;
+`
+
 const HeaderLink = styled(Link)`
   text-decoration: none;
   color: #000;
-  margin: 0 50px;
+  margin: 0 25px;
 `
 
 const HeaderLogo = styled(HeaderLink)`
@@ -74,19 +78,15 @@ const Header = ({ siteTitle }) => (
         <HeaderLogo to="/">{siteTitle}</HeaderLogo>
 
         <div>
-          {navLinks.map(link => {
-            if (!link.cta) {
-              return <HeaderLink to={link.route}>{link.title}</HeaderLink>
-            }
-          })}
+          {navLinks.map(link => (
+            <HeaderLink to={link.route}>{link.title}</HeaderLink>
+          ))}
         </div>
 
         <NavButtonWrapper>
-          {navLinks.map(link => {
-            if (link.cta) {
-              return <CTAButton>{link.title}</CTAButton>
-            }
-          })}
+          {navButtons.map(link => (
+            <NavButton>{link.title}</NavButton>
+          ))}
         </NavButtonWrapper>
       </StyledNavContainer>
     </InnerWrapper>
