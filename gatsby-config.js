@@ -3,6 +3,32 @@ module.exports = {
     title: `Idiosyncrasy`,
     description: `A fanfic marketing site inspired by Quirk.`,
     author: `twitch chat`,
+    navLinks: [
+      {
+        title: "Features",
+        route: "/features",
+      },
+      {
+        title: "Support",
+        route: "/support",
+      },
+      {
+        title: "Pricing",
+        route: "/pricing",
+      },
+      {
+        title: "News",
+        route: "/news",
+      },
+      {
+        title: "Login",
+        cta: true,
+      },
+      {
+        title: "Sign Up",
+        cta: true,
+      },
+    ],
   },
   pathPrefix: "/idiosyncrasy",
   plugins: [
