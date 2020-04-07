@@ -22,6 +22,10 @@ const _Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          navLinks {
+            title
+            cta
+          }
         }
       }
     }
@@ -29,7 +33,10 @@ const _Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        navLinks={data.site.siteMetadata.navLinks}
+      />
       <div
         style={{
           minHeight: "500px",
