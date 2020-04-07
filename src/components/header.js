@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
-import { FlexWrapper } from "../common/wrappers"
 import { InnerWrapper } from "./layout"
 import { CTAButton } from "../common/buttons"
 
@@ -43,6 +42,12 @@ const StyledHeader = styled.header`
   }
 `
 
+const StyledNavContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+`
+
 const NavButtonWrapper = styled.div`
   & ${CTAButton}:nth-child(2) {
     background-color: ${colors.actions.main};
@@ -59,7 +64,7 @@ const HeaderLink = styled(Link)`
 const Header = ({ siteTitle }) => (
   <StyledHeader>
     <InnerWrapper>
-      <FlexWrapper>
+      <StyledNavContainer>
         <h1>
           <HeaderLink to="/">{siteTitle}</HeaderLink>
         </h1>
@@ -79,7 +84,7 @@ const Header = ({ siteTitle }) => (
             }
           })}
         </NavButtonWrapper>
-      </FlexWrapper>
+      </StyledNavContainer>
     </InnerWrapper>
   </StyledHeader>
 )
