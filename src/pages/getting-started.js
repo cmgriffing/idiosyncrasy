@@ -1,28 +1,25 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
 
-import { Layout } from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import { Layout } from "../components/layout";
+import SEO from "../components/seo";
 import styled from 'styled-components';
 
 const MainContainer = styled.div`
   background-color: #aaa;
-  align-content: center;
-  margin: auto;
 `;
-
+const Title = styled.h2`
+  margin: auto;
+  text-align: center;
+`;
 const Section = styled.div`
   display: flex;
-  min-height: 150px;
-  justify-content: flex-start;
-  align-item: center;
-  @media (min-width: 600px) {
-    max-width: 300px;
-  }
+  min-height: 200px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15%;
 `;
 const RightAlignSection = styled(Section)`
-  justify-content: flex-end;
+  margin-right: -15%;
 `;
 const BigNumber = styled.div`
   font-size: 60px;
@@ -30,7 +27,7 @@ const BigNumber = styled.div`
   justify-content: flex-start;
   width: 50px;
 `;
-const Description = styled(ComponentWrapper)`
+const Description = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 200px;
@@ -48,9 +45,9 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Getting Started" />
 
-    <h3>Getting Started</h3>
-
     <MainContainer>
+
+        <Title>Getting Started</Title>
 
         <Section>
             <BigNumber>1</BigNumber>
