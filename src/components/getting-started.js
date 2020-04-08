@@ -3,48 +3,59 @@ import React, { Component } from "react"
 import { Layout } from "../components/layout";
 import SEO from "../components/seo";
 import styled from 'styled-components';
+import colors from "../common/colors";
 
 const MainContainer = styled.div`
-  background-color: #aaa;
+  background-color: ${colors.backgrounds.dark1};
+  color: ${colors.typography.light};
 `;
 const Title = styled.h2`
-  margin: auto;
+  padding-top: 32px;
   text-align: center;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 47px;
 `;
 const Section = styled.div`
   display: flex;
   min-height: 200px;
   justify-content: center;
   align-items: center;
-  margin-right: 15%;
+  margin-left: -20%;
+  min-width: 400px;
 `;
 const RightAlignSection = styled(Section)`
-  margin-right: -15%;
+  margin-right: -40%;
 `;
 const BigNumber = styled.div`
   font-size: 60px;
   align-items: center;
   justify-content: flex-start;
-  width: 50px;
+  width: 100px;
+  font-weight: 600;
+  font-size: 144px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 const Description = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 200px;
+  width: 420px;
 `;
 const SectionTitle = styled.h4`
   margin: 0;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 47px;
 `;
 const SectionParagraph = styled.p`
   margin: 0;
   font-size: 12px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
 `;
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Getting Started" />
-
+const GettingStartedComponent = () => (
     <MainContainer>
 
         <Title>Getting Started</Title>
@@ -74,7 +85,6 @@ const IndexPage = () => (
         </Section>
 
     </MainContainer>
-  </Layout>
-)
+);
 
-export default IndexPage
+export default GettingStartedComponent;
