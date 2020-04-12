@@ -18,6 +18,7 @@ colors.backgrounds = {
   dark2: colors._private.darkGrey,
   header: colors._private.primary,
   footer: colors._private.orange,
+  light: colors._private.offWhite,
 }
 
 colors.typography = {

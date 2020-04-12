@@ -6,9 +6,11 @@ import styled from 'styled-components';
 import colors from "../common/colors";
 
 const MainContainer = styled.div`
-  background-color: ${colors.backgrounds.dark1};
   color: ${colors.typography.light};
-`;
+  background-color: ${colors.backgrounds.dark1};
+  clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+  transform: translateY(-10%);
+  `;
 const Title = styled.h2`
   padding-top: 32px;
   text-align: center;
