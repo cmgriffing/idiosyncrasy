@@ -40,7 +40,7 @@ const HeaderLogo = styled(HeaderLink)`
   font-size: 36px;
   font-weight: 500;
   line-height: 60px;
-  font-family: ${fonts.headerFont};
+  font-family: ${fonts.logoFont};
 `
 
 const Header = ({ siteTitle }) => (
