@@ -18,25 +18,22 @@ const StyledNavContainer = styled.div`
   place-items: center;
 `
 
-const NavButton = styled.a`
+const LoginButton = styled.a`
   padding: 25px;
   color: #000;
   background-color: transparent;
   text-decoration: none;
 `
 
-const NavButtonWrapper = styled.div`
-  & ${NavButton}:nth-child(2) {
-    background-color: ${colors.actions.main};
-    color: #fff;
-  }
+const SignupButton = styled.a`
+  background-color: ${colors.actions.main};
+  color: #fff;
 `
 
 const HeaderLink = styled(Link)`
   text-decoration: none;
   color: #000;
   margin: 0 25px;
-  font-family: ${fonts.headerFont};
 `
 
 const HeaderLogo = styled(HeaderLink)`
@@ -59,10 +56,10 @@ const Header = ({ siteTitle }) => (
           <HeaderLink to="news">News</HeaderLink>
         </div>
 
-        <NavButtonWrapper>
-          <NavButton>Login</NavButton>
-          <NavButton>Sign Up</NavButton>
-        </NavButtonWrapper>
+        <div>
+          <LoginButton>Login</LoginButton>
+          <SignupButton>Sign Up</SignupButton>
+        </div>
       </StyledNavContainer>
     </InnerWrapper>
   </StyledHeader>

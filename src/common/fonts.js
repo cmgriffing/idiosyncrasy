@@ -1,6 +1,6 @@
 const fonts = {
   mainFont: "IBM Plex Sans",
-  headerFont: "Poppins",
+  logoFont: "Poppins",
 }
 
 export default fonts
