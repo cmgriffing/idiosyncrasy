@@ -18,18 +18,18 @@ const StyledNavContainer = styled.div`
   place-items: center;
 `
 
-const NavButtonWrapper = styled.div`
-  & ${NavButton}:nth-child(2) {
-    background-color: ${colors.actions.main};
-    color: #fff;
-  }
-`
-
 const NavButton = styled.a`
   padding: 25px;
   color: #000;
   background-color: transparent;
   text-decoration: none;
+`
+
+const NavButtonWrapper = styled.div`
+  & ${NavButton}:nth-child(2) {
+    background-color: ${colors.actions.main};
+    color: #fff;
+  }
 `
 
 const HeaderLink = styled(Link)`
