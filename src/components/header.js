@@ -18,14 +18,14 @@ const StyledNavContainer = styled.div`
   place-items: center;
 `
 
-const LoginButton = styled.a`
+const NavButton = styled.a`
   padding: 25px;
   color: #000;
   background-color: transparent;
   text-decoration: none;
 `
 
-const SignupButton = styled.a`
+const SignupButton = styled(NavButton)`
   background-color: ${colors.actions.main};
   color: #fff;
 `
@@ -57,7 +57,7 @@ const Header = ({ siteTitle }) => (
         </div>
 
         <div>
-          <LoginButton>Login</LoginButton>
+          <NavButton>Login</NavButton>
           <SignupButton>Sign Up</SignupButton>
         </div>
       </StyledNavContainer>
