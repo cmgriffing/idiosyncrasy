@@ -6,6 +6,7 @@ import styled from "styled-components"
 import { InnerWrapper } from "./layout"
 
 import colors from "../common/colors"
+import fonts from "../common/fonts"
 
 const navLinks = [
   {
@@ -63,12 +64,14 @@ const HeaderLink = styled(Link)`
   text-decoration: none;
   color: #000;
   margin: 0 25px;
+  font-family: ${fonts.headerFont};
 `
 
 const HeaderLogo = styled(HeaderLink)`
   font-size: 36px;
   font-weight: 500;
   line-height: 60px;
+  font-family: ${fonts.headerFont};
 `
 
 const Header = ({ siteTitle }) => (
