@@ -8,34 +8,6 @@ import { InnerWrapper } from "./layout"
 import colors from "../common/colors"
 import fonts from "../common/fonts"
 
-const navLinks = [
-  {
-    title: "Features",
-    route: "/features",
-  },
-  {
-    title: "Support",
-    route: "/support",
-  },
-  {
-    title: "Pricing",
-    route: "/pricing",
-  },
-  {
-    title: "News",
-    route: "/news",
-  },
-]
-
-const navButtons = [
-  {
-    title: "Login",
-  },
-  {
-    title: "Sign Up",
-  },
-]
-
 const StyledHeader = styled.header`
   background: ${colors.backgrounds.header};
 `
@@ -81,15 +53,15 @@ const Header = ({ siteTitle }) => (
         <HeaderLogo to="/">{siteTitle}</HeaderLogo>
 
         <div>
-          {navLinks.map(link => (
-            <HeaderLink to={link.route}>{link.title}</HeaderLink>
-          ))}
+          <HeaderLink to="features">Features</HeaderLink>
+          <HeaderLink to="support">Support</HeaderLink>
+          <HeaderLink to="pricing">Pricing</HeaderLink>
+          <HeaderLink to="news">News</HeaderLink>
         </div>
 
         <NavButtonWrapper>
-          {navButtons.map(link => (
-            <NavButton>{link.title}</NavButton>
-          ))}
+          <NavButton>Login</NavButton>
+          <NavButton>Sign Up</NavButton>
         </NavButtonWrapper>
       </StyledNavContainer>
     </InnerWrapper>
