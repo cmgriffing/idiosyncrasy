@@ -3,11 +3,12 @@ on: [pull_request]
 
 jobs:
   lint:
+    name: Run Prettier Check
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install
