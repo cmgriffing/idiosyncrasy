@@ -6,17 +6,8 @@ import styled from 'styled-components';
 import colors from "../common/colors";
 import { SlantedBorderElement } from "../common/slanted-borders-helpers.js";
 
-import breakpoints
-from '../common/breakpoints.js';
+import breakpoints from '../common/breakpoints.js';
 
-const {
-  mobile,
-  tablet,
-  medium,
-  large,
-  xl,
-  xxl,
-} = breakpoints;
 const MainContainer = styled(SlantedBorderElement)`
   color: ${colors.typography.light};
   background-color: ${colors.backgrounds.dark1};
@@ -28,7 +19,7 @@ const Title = styled.h2`
   font-size: 20px;
   line-height: 47px;
   
-  @media (min-width: 480px) {
+  @media (min-width: ${breakpoints.mobile}px) {
     font-size: 36px;
   }
 `;
@@ -39,19 +30,19 @@ const Section = styled.div`
   align-items: center;
   min-width: 100px;
   transform: translateX(5%);
-  @media (min-width: 480px) and (max-width: 760px) {
+  @media (min-width: ${breakpoints.mobile}px) and (max-width: ${breakpoints.tablet}px) {
     min-width: 150px;
   }
-  @media (min-width: 760px) {
+  @media (min-width: ${breakpoints.tablet}px) {
     transform: translateX(-15%);
     min-width: 200px;
   }
 `;
 const RightAlignSection = styled(Section)`
-  @media (min-width: 480px)  {
+  @media (min-width: ${breakpoints.mobile}px)  {
     min-width: 150px;
   }
-  @media (min-width: 760px)  {
+  @media (min-width: ${breakpoints.tablet}px)  {
     transform: translateX(15%);
     min-width: 300px;
   }
@@ -65,7 +56,7 @@ const BigNumber = styled.div`
   font-size: 48px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-  @media (min-width: 480px) {
+  @media (min-width: ${breakpoints.mobile}px) {
     font-size: 144px;
     width: 100px;
   }
@@ -74,10 +65,10 @@ const Description = styled.div`
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 300px;
-  @media (min-width: 480px)  {
+  @media (min-width: ${breakpoints.mobile}px)  {
     min-width: 150px;
   }
-  @media (min-width: 760px)  {
+  @media (min-width: ${breakpoints.tablet}px)  {
     transform: translateX(15%);
     min-width: 300px;
     width: 380px;
@@ -88,7 +79,7 @@ const SectionTitle = styled.h4`
   font-weight: 600;
   font-size: 24px;
   line-height: 47px;
-  @media (min-width: 480px) {
+  @media (min-width: ${breakpoints.mobile}px) {
     font-size: 36px;
   }
 `;
@@ -97,7 +88,7 @@ const SectionParagraph = styled.p`
   font-size: 12px;
   font-weight: 600;
   line-height: 31px;
-  @media (min-width: 480px) {
+  @media (min-width: ${breakpoints.mobile}px) {
     font-size: 24px;
   }
 `;
