@@ -30,7 +30,7 @@ const Section = styled.div`
   align-items: center;
   min-width: 100px;
   transform: translateX(5%);
-  @media (min-width: ${breakpoints.mobile}px) and (max-width: ${breakpoints.tablet}px) {
+  @media (min-width: ${breakpoints.mobile}px) {
     min-width: 150px;
   }
   @media (min-width: ${breakpoints.tablet}px) {
