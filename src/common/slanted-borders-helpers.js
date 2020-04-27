@@ -4,7 +4,8 @@ import styled from "styled-components";
 export const SlantedBorderElement = styled.div`
   /* Your styling goes here */
 
-  clip-path: polygon(0 30px, 100% 0,100% 100%, 0 100%);
+  clip-path: polygon(0 20px, 100% 0,100% 100%, 0 100%);
   margin-top: -50px;
+  padding: 10px;
 
 `
