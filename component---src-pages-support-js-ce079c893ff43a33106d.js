@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{GOMi:function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),l=n.n(a),o=n("Wbzz"),r=n("Bl7J"),p=n("vrFN");t.default=function(){return l.a.createElement(r.b,null,l.a.createElement(p.a,{title:"Support"}),l.a.createElement("h1",null,"Support"),l.a.createElement("p",null,"Welcome to Support"),l.a.createElement(o.Link,{to:"/"},"Go back to the homepage"))}}}]);
+//# sourceMappingURL=component---src-pages-support-js-ce079c893ff43a33106d.js.map
