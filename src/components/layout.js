@@ -45,6 +45,7 @@ const _Layout = ({ children }) => {
         />
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
+
       <div
         style={{
           minHeight: "500px",
