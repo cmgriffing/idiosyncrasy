@@ -23,28 +23,30 @@ const Title = styled.h2`
     font-size: 36px;
   }
 `
+const OffsetSectionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 200px;
+`
+
+const OffsetDiv = styled.div`
+  @media (min-width: ${breakpoints.tablet}px) {
+    width: 250px;
+  }
+`
+
 const Section = styled.div`
   display: flex;
-  min-height: 200px;
+  max-height: 100px;
   justify-content: center;
   align-items: center;
   min-width: 100px;
-  transform: translateX(5%);
   @media (min-width: ${breakpoints.mobile}px) {
+    max-height: 200px;
     min-width: 150px;
   }
   @media (min-width: ${breakpoints.tablet}px) {
-    transform: translateX(-15%);
     min-width: 200px;
-  }
-`
-const RightAlignSection = styled(Section)`
-  @media (min-width: ${breakpoints.mobile}px) {
-    min-width: 150px;
-  }
-  @media (min-width: ${breakpoints.tablet}px) {
-    transform: translateX(15%);
-    min-width: 300px;
   }
 `
 const BigNumber = styled.div`
@@ -97,31 +99,40 @@ const GettingStartedComponent = () => (
   <MainContainer>
     <Title>Getting Started</Title>
 
-    <Section>
-      <BigNumber>1</BigNumber>
-      <Description>
-        <SectionTitle>Sign up and log in.</SectionTitle>
-        <SectionParagraph>It takes 30 seconds</SectionParagraph>
-      </Description>
-    </Section>
+    <OffsetSectionContainer>
+      <Section>
+        <BigNumber>1</BigNumber>
+        <Description>
+          <SectionTitle>Sign up and log in.</SectionTitle>
+          <SectionParagraph>It takes 30 seconds</SectionParagraph>
+        </Description>
+      </Section>
+      <OffsetDiv />
+    </OffsetSectionContainer>
 
-    <RightAlignSection>
-      <BigNumber>2</BigNumber>
-      <Description>
-        <SectionTitle>Configure some settings. </SectionTitle>
-        <SectionParagraph>
-          Add some Alerts. Connect up some lights.
-        </SectionParagraph>
-      </Description>
-    </RightAlignSection>
+    <OffsetSectionContainer>
+      <OffsetDiv />
+      <Section>
+        <BigNumber>2</BigNumber>
+        <Description>
+          <SectionTitle>Configure some settings. </SectionTitle>
+          <SectionParagraph>
+            Add some Alerts. Connect up some lights.
+          </SectionParagraph>
+        </Description>
+      </Section>
+    </OffsetSectionContainer>
 
-    <Section>
-      <BigNumber>3</BigNumber>
-      <Description>
-        <SectionTitle>Profit!</SectionTitle>
-        <SectionParagraph>The Sky is the limit.</SectionParagraph>
-      </Description>
-    </Section>
+    <OffsetSectionContainer>
+      <Section>
+        <BigNumber>3</BigNumber>
+        <Description>
+          <SectionTitle>Profit!</SectionTitle>
+          <SectionParagraph>The Sky is the limit.</SectionParagraph>
+        </Description>
+      </Section>
+      <OffsetDiv />
+    </OffsetSectionContainer>
   </MainContainer>
 )
 
