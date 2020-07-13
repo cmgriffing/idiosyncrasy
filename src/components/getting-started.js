@@ -71,7 +71,6 @@ const Description = styled.div`
     min-width: 150px;
   }
   @media (min-width: ${breakpoints.tablet}px) {
-    transform: translateX(15%);
     min-width: 300px;
     width: 380px;
   }
