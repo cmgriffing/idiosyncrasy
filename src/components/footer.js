@@ -11,6 +11,8 @@ import breakpoints from "../common/breakpoints"
 const FooterElement = styled(SlantedBorderElement)`
   background: ${colors.backgrounds.footer};
   padding-bottom: 15px;
+  padding-top: 62px;
+  margin-top: -20px;
 `
 
 const PageElements = styled.div`
