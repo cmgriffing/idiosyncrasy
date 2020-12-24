@@ -13,7 +13,6 @@ const IndexPage = () => (
       <Image />
       <GettingStartedComponent />
     </div>
-    <Link to="/getting-started">Go to page 3</Link>
   </Layout>
 )
 
