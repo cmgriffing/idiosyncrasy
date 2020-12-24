@@ -27,9 +27,9 @@ const LinkTitle = styled(Link)`
 const SiteTitle = styled(Link)`
   text-decoration: none;
   color: black;
-  font-family: "Poppins";
-  font-size: "36px";
-  font-weight: "normal";
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: normal;
 `
 
 const PageElement = styled.div`
