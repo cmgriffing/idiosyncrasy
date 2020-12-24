@@ -15,23 +15,22 @@ const FooterElement = styled(SlantedBorderElement)`
 
 const PageElements = styled.div`
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
-`;
+`
 
 const LinkTitle = styled(Link)`
   text-decoration: none;
   color: black;
-`;
+`
 
 const SiteTitle = styled(Link)`
   text-decoration: none;
   color: black;
-  font-family: 'Poppins'; 
-  font-size: '36px'; 
-  font-weight: 'normal';
-`;
-
+  font-family: "Poppins";
+  font-size: "36px";
+  font-weight: "normal";
+`
 
 const PageElement = styled.div`
   display: inline-block;
@@ -41,19 +40,20 @@ const PageElement = styled.div`
   @media (min-width: ${breakpoints.tablet}px) {
     margin: 30px;
   }
-`;
+`
 
 const Footer = ({ siteTitle, pages }) => (
   <FooterElement as="footer">
     <InnerWrapper>
       <div>
         <PageElements>
-        {pages.map(page => 
-        <PageElement id={page}>
-          <LinkTitle to={"/" + page}>
-            <h4>{page}</h4>
-          </LinkTitle>
-        </PageElement>)}
+          {pages.map(page => (
+            <PageElement id={page}>
+              <LinkTitle to={"/" + page}>
+                <h4>{page}</h4>
+              </LinkTitle>
+            </PageElement>
+          ))}
         </PageElements>
         <PageElements>
           <h4>
