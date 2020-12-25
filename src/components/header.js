@@ -24,21 +24,20 @@ const StyledNavContainer = styled.div`
     font-size: 16px;
     font-height: inherit;
     padding: 0 10px;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
   }
 `
 
 const NavButton = styled.a`
   padding: 25px;
-  color: #000;
-  background-color: transparent;
+  color: ${colors.typography.dark};
+  background-color: ${colors.backgrounds.header};
   text-decoration: none;
+  padding: 0px 10px;
 
   @media (max-width: ${breakpoints.tablet}px) {
     font-size: 16px;
-    font-height: inherit;
-    padding: 0 10px;
   }
 `
 
@@ -51,14 +50,12 @@ const SignupButton = styled(NavButton)`
 
   @media (max-width: ${breakpoints.tablet}px) {
     font-size: 16px;
-    font-height: inherit;
-    padding: 0 10px;
   }
 `
 
 const HeaderLink = styled(Link)`
   text-decoration: none;
-  color: #000;
+  color: ${colors.typography.dark};
   padding: 0 10px;
 
   @media (max-width: ${breakpoints.tablet}px) {
@@ -79,7 +76,8 @@ const HeaderLogo = styled(HeaderLink)`
 `
 
 const HeaderGroup = styled.div`
-  
+  display: flex;
+  flex-wrap: no-wrap;
 `
 const Header = ({ siteTitle }) => (
   <StyledHeader>
