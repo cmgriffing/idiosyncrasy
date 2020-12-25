@@ -12,7 +12,7 @@ import breakpoints from "../common/breakpoints"
 const StyledHeader = styled.header`
   background: ${colors.backgrounds.header};
 `
-// FIXME: use min-width
+
 const StyledNavContainer = styled.div`
   display: flex;
   justify-content: center;
