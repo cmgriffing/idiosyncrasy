@@ -46,9 +46,9 @@
   "license": "MIT",
   "scripts": {
     "build": "cross-env ENVIRONMENT=prod NODE_ENV=prod GATSBY_ACTIVE_ENV=prod gatsby build --prefix-paths",
-    "lint": "prettier --check ./src/**/*.js",
+    "lint": "prettier --check \"./src/**/*.{js,jsx,json,md}\"",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format": "prettier --write \"./src/**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
