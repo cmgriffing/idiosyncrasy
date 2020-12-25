@@ -1,7 +1,5 @@
-import React, { Component } from "react"
+import React from "react"
 
-import { Layout } from "../components/layout"
-import SEO from "../components/seo"
 import styled from "styled-components"
 import colors from "../common/colors"
 import { SlantedBorderElement } from "../common/slanted-borders-helpers.js"
