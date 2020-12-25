@@ -7,6 +7,7 @@ import { InnerWrapper } from "./layout"
 import { SlantedBorderElement } from "../common/slanted-borders-helpers"
 import colors from "../common/colors"
 import breakpoints from "../common/breakpoints"
+import fonts from "../common/fonts"
 
 const FooterElement = styled(SlantedBorderElement)`
   background: ${colors.backgrounds.footer};
@@ -29,7 +30,7 @@ const LinkTitle = styled(Link)`
 const SiteTitle = styled(Link)`
   text-decoration: none;
   color: ${colors.typography.dark};
-  font-family: Poppins;
+  font-family: ${fonts.logoFont};
   font-size: 36px;
   font-weight: normal;
 `
