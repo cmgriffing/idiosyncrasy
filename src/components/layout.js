@@ -53,7 +53,10 @@ const _Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
-      <Footer siteTitle={data.site.siteMetadata.title} />
+      <Footer
+        siteTitle={data.site.siteMetadata.title}
+        pages={["Features", "Support", "News", "Login", "Sign Up"]}
+      />
     </>
   )
 }
