@@ -12,20 +12,20 @@ import breakpoints from "../common/breakpoints"
 const StyledHeader = styled.header`
   background: ${colors.backgrounds.header};
 `
-
+// FIXME: use min-width
 const StyledNavContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   place-items: center;
   line-height: 60px;
   width: 100%;
+  font-size: 16px;
+  flex-wrap: wrap;
 
-  @media (max-width: ${breakpoints.tablet}px) {
-    font-size: 16px;
-    font-height: inherit;
-    padding: 0 10px;
-    justify-content: center;
-    flex-wrap: wrap;
+  @media (min-width: ${breakpoints.tablet}px) {
+    font-size: inherit;
+    justify-content: space-between;
+    flex-wrap: no-wrap;
   }
 `
 
@@ -35,9 +35,10 @@ const NavButton = styled.a`
   background-color: ${colors.backgrounds.header};
   text-decoration: none;
   padding: 0px 10px;
+  font-size: 16px;
 
-  @media (max-width: ${breakpoints.tablet}px) {
-    font-size: 16px;
+  @media (min-width: ${breakpoints.tablet}px) {
+    font-size: inherit;
   }
 `
 
@@ -47,9 +48,10 @@ const SignupButton = styled(NavButton)`
   color: ${colors.typography.light};
   padding: 0px 10px;
   height: 100%;
-
-  @media (max-width: ${breakpoints.tablet}px) {
-    font-size: 16px;
+  font-size: 16px;
+  
+  @media (min-width: ${breakpoints.tablet}px) {
+    font-size: inherit;
   }
 `
 
@@ -57,20 +59,23 @@ const HeaderLink = styled(Link)`
   text-decoration: none;
   color: ${colors.typography.dark};
   padding: 0 10px;
+  font-size: 16px;
 
-  @media (max-width: ${breakpoints.tablet}px) {
-    font-size: 16px;
+  @media (min-width: ${breakpoints.tablet}px) {
+    font-size: inherit;
   }
 `
 
 const HeaderLogo = styled(HeaderLink)`
-  font-size: 36px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 60px;
   font-family: ${fonts.logoFont};
+  display: none;
 
-  @media (max-width: ${breakpoints.tablet}px) {
-    display: none;
+  @media (min-width: ${breakpoints.tablet}px) {
+    font-size: 36px;
+    display: block;
   }
 `
 
