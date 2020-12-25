@@ -72,7 +72,6 @@ const HeaderLogo = styled(HeaderLink)`
   @media (max-width: ${breakpoints.tablet}px) {
     display: none;
   }
-
 `
 
 const HeaderGroup = styled.div`
