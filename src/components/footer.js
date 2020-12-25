@@ -23,12 +23,12 @@ const PageElements = styled.div`
 
 const LinkTitle = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: ${colors.typography.dark};
 `
 
 const SiteTitle = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: ${colors.typography.dark};
   font-family: Poppins;
   font-size: 36px;
   font-weight: normal;
@@ -36,7 +36,7 @@ const SiteTitle = styled(Link)`
 
 const PageElement = styled.div`
   display: inline-block;
-  color: black;
+  color: ${colors.typography.dark};
   margin: 10px;
 
   @media (min-width: ${breakpoints.tablet}px) {
