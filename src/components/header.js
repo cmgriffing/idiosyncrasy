@@ -49,7 +49,7 @@ const SignupButton = styled(NavButton)`
   padding: 0px 10px;
   height: 100%;
   font-size: 16px;
-  
+
   @media (min-width: ${breakpoints.tablet}px) {
     font-size: inherit;
   }
