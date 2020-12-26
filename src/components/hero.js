@@ -53,7 +53,7 @@ const TopRow = styled.div`
   justify-content: space-around;
   padding: 12vh 0 2vh 0;
   font-size: 48px;
-  color: ${colors.backgrounds.header};
+  color: ${colors.typography.light};
   @media (min-width: ${breakpoints.tablet}px) {
     font-size: 62px;
   }
@@ -89,7 +89,7 @@ const MiddleRow = styled.div`
         max-width: 40vw;
         font-size: 24px;
         text-align: center;
-        color: ${colors.backgrounds.footer};
+        color: ${colors.typography.light};
 
         @media (min-width: ${breakpoints.tablet}px) {
             font-size: 48px;
@@ -105,7 +105,7 @@ const BottomRow = styled.div`
   justify-content: space-around;
   padding: 4vh 0 12vh 0;
   font-size: 48px;
-  color: ${colors.backgrounds.header};
+  color: ${colors.typography.light};
   @media (min-width: ${breakpoints.tablet}px) {
     font-size: 62px;
   }
