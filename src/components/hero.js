@@ -150,7 +150,7 @@ const Hero = () => {
           <LeftTopRow>
             <FaCalendarAlt />
           </LeftTopRow>
-          <OffsetHigh className="robot-icon">
+          <OffsetHigh>
             <FaRobot />
           </OffsetHigh>
           <RightTopRow>
@@ -166,7 +166,7 @@ const Hero = () => {
           <div>
             <FaHeart />
           </div>
-          <OffsetLow className="robot-icon">Sign Up</OffsetLow>
+          <OffsetLow>Sign Up</OffsetLow>
           <div>
             <FaBell />
           </div>
