@@ -10,8 +10,14 @@ const StyledInnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 80vh;
+  height: 50vh;
   width: 100%;
+  @media (min-width: ${breakpoints.tablet}px) {
+    min-height: 70vh;
+  }
+  @media (min-width: ${breakpoints.medium}px) {
+    min-height: 85vh;
+  }
 `
 
 const HeroBackground = styled.div`
