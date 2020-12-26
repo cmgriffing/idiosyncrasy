@@ -62,6 +62,19 @@ const TopRow = styled.div`
   }
 `
 
+const LeftTopRow = styled.div`
+  padding 0;
+  @media (min-width: ${breakpoints.tablet}px) {
+    padding: 0 0 0 5vw;
+  }
+`
+
+const RightTopRow = styled.div`
+  padding 0;
+  @media (min-width: ${breakpoints.tablet}px) {
+    padding: 0 5vw 0 0;
+  }
+`
 const OffsetHigh = styled.div`
   display: inline-block;
   position: relative;
@@ -134,15 +147,15 @@ const Hero = () => {
       <HeroBackground image={data.placeholderImage.childImageSharp.fluid.src} />
       <HeroOverlay>
         <TopRow>
-          <div>
+          <LeftTopRow>
             <FaCalendarAlt />
-          </div>
+          </LeftTopRow>
           <OffsetHigh className="robot-icon">
             <FaRobot />
           </OffsetHigh>
-          <div>
+          <RightTopRow>
             <FaLink />
-          </div>
+          </RightTopRow>
         </TopRow>
 
         <MiddleRow>
