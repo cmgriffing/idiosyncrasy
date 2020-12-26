@@ -122,13 +122,14 @@ const MiddleRow = styled.div`
 const BottomRow = styled.div`
   display: flex;
   justify-content: space-around;
-  padding: 4vh 0 12vh 0;
+  padding: 0 0 12vh 0;
   font-size: 48px;
   color: ${colors.typography.light};
   @media (min-width: ${breakpoints.tablet}px) {
     font-size: 62px;
   }
   @media (min-width: ${breakpoints.medium}px) {
+    padding: 5vh 0 12vh 0;
     font-size: 96px;
   }
 `
