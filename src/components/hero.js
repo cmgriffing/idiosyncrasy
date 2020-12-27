@@ -66,7 +66,6 @@ const MiddleRow = styled.div`
 `
 
 const Hero = ({ children }) => {
-
   return (
     <StyledInnerWrapper>
       <HeroBackground image={children[0]} />
