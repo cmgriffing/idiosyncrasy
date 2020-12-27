@@ -65,17 +65,13 @@ const MiddleRow = styled.div`
     }
 `
 
-const Hero = ({children}) => {
-
-  console.log(children);
+const Hero = ({ children }) => {
 
   return (
     <StyledInnerWrapper>
       <HeroBackground image={children[0]} />
-      <HeroOverlay>        
-        <MiddleRow>
-            {children[1]}
-        </MiddleRow>        
+      <HeroOverlay>
+        <MiddleRow>{children[1]}</MiddleRow>
       </HeroOverlay>
     </StyledInnerWrapper>
   )

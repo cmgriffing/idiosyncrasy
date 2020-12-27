@@ -18,16 +18,18 @@ const IndexPage = () => {
       }
     }
   `)
-  return (<Layout>
-    <SEO title="Home" />
-    <div>
-      <Hero>
-        {data.placeholderImage.childImageSharp.fluid.src}
-        <h1>Take Your Broadcast To The Next Level</h1>
-      </Hero>
-      <GettingStartedComponent />
-    </div>
-  </Layout>)
-};
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div>
+        <Hero>
+          {data.placeholderImage.childImageSharp.fluid.src}
+          <h1>Take Your Broadcast To The Next Level</h1>
+        </Hero>
+        <GettingStartedComponent />
+      </div>
+    </Layout>
+  )
+}
 
 export default IndexPage
