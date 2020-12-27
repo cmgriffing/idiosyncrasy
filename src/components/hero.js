@@ -1,8 +1,5 @@
-import { useStaticQuery } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import { graphql } from "gatsby"
-import { FaHeart, FaCalendarAlt, FaRobot, FaBell, FaLink } from "react-icons/fa"
 import colors from "../common/colors"
 import breakpoints from "../common/breakpoints"
 
@@ -30,7 +27,6 @@ const HeroBackground = styled.div`
     min-height: 50vh;
     z-index: -1;
     width: 100%;
-    max-width: 1340px;
     @media (min-width: ${breakpoints.tablet}px) {
         min-height: 70vh;
     }
@@ -41,62 +37,12 @@ const HeroBackground = styled.div`
 
 const HeroOverlay = styled.div`
   position: relative;
-  top: -55vh;
+  top: -30vh;
   left: 0;
-  z-index: 9999;
+  align-items: center;
   @media (min-width: ${breakpoints.tablet}px) {
-    top: -75vh;
+    top: -50vh;
   }
-  @media (min-width: ${breakpoints.medium}px) {
-    top: -90vh;
-  }
-`
-
-const TopRow = styled.div`
-  filter: unset;
-  -webkit-filter: unset;
-  display: flex;
-  justify-content: space-around;
-  padding: 12vh 0 2vh 0;
-  font-size: 48px;
-  color: ${colors.typography.light};
-  @media (min-width: ${breakpoints.tablet}px) {
-    font-size: 62px;
-  }
-  @media (min-width: ${breakpoints.medium}px) {
-    font-size: 96px;
-  }
-`
-
-const LeftTopRow = styled.div`
-  padding 0;
-  @media (min-width: ${breakpoints.tablet}px) {
-    padding: 0 0 0 5vw;
-  }
-`
-
-const RightTopRow = styled.div`
-  padding 0;
-  @media (min-width: ${breakpoints.tablet}px) {
-    padding: 0 5vw 0 0;
-  }
-`
-const OffsetHigh = styled.div`
-  display: inline-block;
-  position: relative;
-  top: -50px;
-`
-
-const OffsetLow = styled.div`
-  display: inline-block;
-  position: relative;
-  top: 50px;
-  max-height: 70px;
-  font-size: 24px;
-  vertical-align: text-bottom;
-  padding: 20px 25px;
-  color: ${colors.typography.light};
-  background-color: ${colors.backgrounds.footer};
 `
 
 const MiddleRow = styled.div`
@@ -104,8 +50,8 @@ const MiddleRow = styled.div`
     justify-content: center;
     padding; 10vh;
     flex-wrap: wrap;
+    align-items: center;
     h1 {
-        max-width: 40vw;
         font-size: 24px;
         text-align: center;
         color: ${colors.typography.light};
@@ -119,66 +65,17 @@ const MiddleRow = styled.div`
     }
 `
 
-const BottomRow = styled.div`
-  display: flex;
-  justify-content: space-around;
-  padding: 0 0 12vh 0;
-  font-size: 48px;
-  color: ${colors.typography.light};
-  @media (min-width: ${breakpoints.tablet}px) {
-    font-size: 62px;
-  }
-  @media (min-width: ${breakpoints.medium}px) {
-    padding: 5vh 0 12vh 0;
-    font-size: 96px;
-  }
-`
+const Hero = ({children}) => {
 
-const Hero = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "image 1.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1440) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
-  console.log(data)
+  console.log(children);
 
   return (
     <StyledInnerWrapper>
-      <HeroBackground image={data.placeholderImage.childImageSharp.fluid.src} />
-      <HeroOverlay>
-        <TopRow>
-          <LeftTopRow>
-            <FaCalendarAlt />
-          </LeftTopRow>
-          <OffsetHigh>
-            <FaRobot />
-          </OffsetHigh>
-          <RightTopRow>
-            <FaLink />
-          </RightTopRow>
-        </TopRow>
-
+      <HeroBackground image={children[0]} />
+      <HeroOverlay>        
         <MiddleRow>
-          <h1>Take Your Broadcast To The Next Level</h1>
-        </MiddleRow>
-        <BottomRow>
-          <div />
-          <div>
-            <FaHeart />
-          </div>
-          <OffsetLow>Sign Up</OffsetLow>
-          <div>
-            <FaBell />
-          </div>
-          <div />
-        </BottomRow>
+            {children[1]}
+        </MiddleRow>        
       </HeroOverlay>
     </StyledInnerWrapper>
   )

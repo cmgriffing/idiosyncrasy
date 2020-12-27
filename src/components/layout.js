@@ -15,7 +15,6 @@ import styled from "styled-components"
 import breakpoints from "../common/breakpoints"
 import Header from "./header"
 import Footer from "./footer"
-import Hero from "./hero"
 import "./layout.css"
 import "./globals.css"
 
@@ -46,7 +45,6 @@ const _Layout = ({ children }) => {
         />
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Hero />
 
       <div
         style={{
