@@ -23,8 +23,10 @@ const IndexPage = () => {
       <SEO title="Home" />
       <div>
         <Hero>
-          {data.placeholderImage.childImageSharp.fluid.src}
-          <h1>Take Your Broadcast To The Next Level</h1>
+          {{
+            backgroundImage: data.placeholderImage.childImageSharp.fluid.src,
+            title: "Take Your Broadcast To The Next Level",
+          }}
         </Hero>
         <GettingStartedComponent />
       </div>

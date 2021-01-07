@@ -51,26 +51,28 @@ const MiddleRow = styled.div`
     padding; 10vh;
     flex-wrap: wrap;
     align-items: center;
-    h1 {
-        font-size: 24px;
-        text-align: center;
-        color: ${colors.typography.light};
+`
+const MiddleRowTitle = styled.h2`
+  font-size: 24px;
+  text-align: center;
+  color: ${colors.typography.light};
 
-        @media (min-width: ${breakpoints.tablet}px) {
-            font-size: 48px;
-        }
-        @media (min-width: ${breakpoints.medium}px) {
-            font-size: 62px;
-        }
-    }
+  @media (min-width: ${breakpoints.tablet}px) {
+    font-size: 48px;
+  }
+  @media (min-width: ${breakpoints.medium}px) {
+    font-size: 62px;
+  }
 `
 
-const Hero = ({ children }) => {
+const Hero = ({ children: { backgroundImage, title } }) => {
   return (
     <StyledInnerWrapper>
-      <HeroBackground image={children[0]} />
+      <HeroBackground image={backgroundImage} />
       <HeroOverlay>
-        <MiddleRow>{children[1]}</MiddleRow>
+        <MiddleRow>
+          <MiddleRowTitle>{title}</MiddleRowTitle>
+        </MiddleRow>
       </HeroOverlay>
     </StyledInnerWrapper>
   )
